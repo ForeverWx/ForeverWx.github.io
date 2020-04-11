@@ -29,7 +29,8 @@ comments: false
                         <a href="https://blog.csdn.net/{{ site.csdn_username}}" target="_blank">CSDN</a>
                     </span>
                     <span class="meta-info badge badge-warning">
-                        <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=amirforevercn@gmail.com" target="_blank">Gmail</a>
+                        <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&source=mailto&to=amirforevercn@gmail.com"
+                           target="_blank">Gmail</a>
                     </span>
                 </div>
             </div>
@@ -38,7 +39,7 @@ comments: false
 </section>
 <!-- /.banner -->
 <section class="container content">
-    <div class="columns">
+    <div class="columns  d-flex flex-row">
         <div class="column two-thirds">
             <ol class="repo-list">
                 {% for post in paginator.posts %}
@@ -67,7 +68,7 @@ comments: false
         <div class="column one-third">
             {% include sidebar-search.html %}
             {% include sidebar-qrcode.html %}
-            {% include sidebar-ad.html %}
+            <!--            {% include sidebar-ad.html %}-->
             {% include sidebar-popular-repo.html %}
         </div>
     </div>
