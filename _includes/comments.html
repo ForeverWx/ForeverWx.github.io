@@ -1,4 +1,4 @@
-{% if page.comments != false %}
+<!--{% if page.comments != false %}
 
 {% if site.comments_provider != 'disqus' and site.lazy_load_disqus and site.disqus and site.disqus.username %}
 <a href="#" class="show_disqus_comment" onclick="return false;">Show Disqus Comments</a>
@@ -40,7 +40,7 @@
 {% when 'disqus' %}
 {% if site.disqus and site.disqus.username %}
 {% assign load_disqus = true %}
-<!-- Disqus Protection, see https://github.com/mzlogin/mzlogin.github.io/issues/2 -->
+&lt;!&ndash; Disqus Protection, see https://github.com/mzlogin/mzlogin.github.io/issues/2 &ndash;&gt;
 {% if site.disqus.username == 'mzlogin' %}
 {% assign load_disqus = false %}
 {% if site.url contains 'mazhuang.org' %}
@@ -88,13 +88,15 @@
     })
     gitment.render('container')
 </script>
-{% when 'gitalk' %}
+{% when 'gitalk' %}-->
 <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<!--使用md5 加密限制长度-->
+<script src="{{site.url}}/assets/js/globals//md5.min.js"></script>
 <script>
     var gitalk = new Gitalk({
-        id: location.pathname,
+        id: md5(location.pathname),
         clientID: '{{ site.gitalk.clientID }}',
         clientSecret: '{{ site.gitalk.clientSecret }}',
         repo: '{{ site.gitalk.repo }}',
@@ -105,6 +107,7 @@
         language: 'zh-CN'
     })
     gitalk.render('gitalk-container')
-</script>
+</script><!--
 {% endcase %}
 {% endif %}
+-->
