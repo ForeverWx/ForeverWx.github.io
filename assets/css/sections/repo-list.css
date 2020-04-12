@@ -33,6 +33,15 @@
 }
 
 .repo-list-name {
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-stretch: normal;
+    font-family: 微软雅黑, tahoma;
+
+
     margin: 0 0 8px;
     font-size: 20px;
     line-height: 1.2
@@ -49,6 +58,24 @@
 }
 
 .repo-list-description {
+    line-height: 22px;
+    /*width: 590px;*/
+    display: -webkit-box;
+    letter-spacing: 0.7px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-indent: 2em;
+
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: 400;
+    font-stretch: normal;
+    font-family: 微软雅黑, tahoma;
+
     max-width: 550px;
     margin-top: 8px;
     margin-bottom: 0;

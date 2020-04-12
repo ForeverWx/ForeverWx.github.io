@@ -1,4 +1,4 @@
-<h3>My Popular Repositories</h3>
+<h3 class="pb-3">My Popular Repositories</h3>
 {% if site.github.public_repositories != null %}
 {% assign repos = site.github.public_repositories | sort: "stargazers_count" | reverse %}
 {% for repo in repos | limit: site.side_bar_repo_limit %}
@@ -6,7 +6,7 @@
     <div class="thumbnail">
         <div class="card-image geopattern" data-pattern-id="{{ repo.name }}">
             <div class="card-image-cell">
-                <h3 class="card-title">
+                <h3 class="card-title text-dark">
                     {{ repo.name }}
                 </h3>
             </div>
@@ -16,14 +16,30 @@
                 <p class="card-text">{{ repo.description }}</p>
             </div>
             <div class="card-text">
-                <span class="meta-info" title="{{ repo.stargazers_count }} stars">
-                    <span class="octicon octicon-star"></span> {{ repo.stargazers_count }}
+                <span class="meta-info" title="{{ repo.watchers_count }} watchers">
+                    <span>
+                        <img src="{{site.url}}/assets/images/repository/eye.svg" alt="watchers" height="15"
+                             width="15">
+                    </span>
+                    {{ repo.watchers_count }}
+                </span> <span class="meta-info" title="{{ repo.stargazers_count }} stars">
+                   <span>
+                        <img src="{{site.url}}/assets/images/repository/star.svg" alt="stars" height="15"
+                             width="15">
+                    </span> {{ repo.stargazers_count }}
                 </span>
                 <span class="meta-info" title="{{ repo.forks_count }} forks">
-                    <span class="octicon octicon-git-branch"></span> {{ repo.forks_count }}
+                     <span>
+                        <img src="{{site.url}}/assets/images/repository/arrow-down-circle.svg" alt="forks" height="15"
+                             width="15">
+                    </span>
+                    {{ repo.forks_count }}
                 </span>
                 <span class="meta-info" title="Last updated：{{ repo.updated_at }}">
-                    <span class="octicon octicon-clock"></span>
+                    <span>
+                        <img src="{{site.url}}/assets/images/repository/clock.svg" alt="last update" height="15"
+                             width="15">
+                    </span>
                     <time datetime="{{ repo.updated_at }}">{{ repo.updated_at | date: '%Y-%m-%d' }}</time>
                 </span>
             </div>
