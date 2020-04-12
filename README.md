@@ -1,7 +1,5 @@
 # ForeverWx.github.io
-# 码志
-
-我的个人博客：<https://mazhuang.org>，欢迎 Star 和 Fork。
+欢迎 Star 和 Fork。
 
 ## 概览
 
@@ -18,9 +16,7 @@
 
 ## 效果预览
 
-**[在线预览 &rarr;](https://mazhuang.org)**
-
-![screenshot home](https://mazhuang.org/assets/images/screenshots/home.png)
+**[在线预览 &rarr;](https://ForeverWx.github.io)**
 
 ## Fork 指南
 
@@ -77,9 +73,7 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 ## 联系我
 
-如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://github.com/mzlogin/mzlogin.github.io/issues) 或者微信公众号「闷骚的程序员」与我取得联系。
-
-<img width="192px" height="192px" src="https://mazhuang.org/assets/images/qrcode.jpg"/>
+如果对本博客模板或者内容有任何建议，可以通过 [Issues](https://ForeverWx.github.io/issues)与我取得联系
 
 ## 致谢
 
@@ -87,8 +81,3 @@ Fork 本项目之后，还需要做一些事情才能让你的页面「正确」
 
 Thanks for JetBrains' support.
 
-<a href="https://www.jetbrains.com/?from=mzlogin.github.io"><img src="./assets/images/jetbrains.svg"/></a>
-
-[1]: https://github.com/mzlogin/chinese-copywriting-guidelines
-[2]: https://help.github.com/articles/setting-up-your-pages-site-locally-with-jekyll/
-[3]: https://github.com/mzlogin/mzlogin.github.io/issues/2
