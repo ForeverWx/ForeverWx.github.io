@@ -123,17 +123,18 @@
                     <a href="{{ site.url }}/" title="{{ site.title }}" class="text-dark display-4 font-weight-normal"
                        style="text-decoration: none"> <img src="{{site.url}}/assets/images/github.svg" alt="Forever"
                                                            height="45"
-                                                           width="48">Forever</a></div>
+                                                           width="48">Forever</a>
+                </div>
                 <!--<button class="collapsed mobile-visible" type="button" onclick="toggleMenu();">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>-->
                 <div class="col-12 text-center align-center">
-                    <nav class="site-header-nav pt-4 font-weight-bold pb-2" role="navigation">
+                    <nav class="pt-4 font-weight-bold" role="navigation">
                         {% for nav in site.navs %}
                         <a href="{{ site.url }}{{ nav.href }}"
-                           class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item"
+                           class="{% if page.menu == nav.label %} selected {% endif %} site-header-nav-item-phone"
                            target="{{ nav.target | default: _self }}" title="{{ nav.label }}">{{ nav.label }}</a>
                         {% endfor %}
                     </nav>

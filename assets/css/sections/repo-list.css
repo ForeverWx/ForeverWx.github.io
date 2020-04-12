@@ -24,7 +24,7 @@
     bottom: 0
 }
 
-.repo-list-item {
+.repo-list-item:not(:last-child) {
     position: relative;
     padding-top: 30px;
     padding-bottom: 30px;
