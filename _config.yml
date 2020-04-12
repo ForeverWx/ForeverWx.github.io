@@ -3,7 +3,7 @@
 # ---------------- #
 #配置访问路径
 baseurl:
-url: https://foreverwx.github.io/
+url: https://foreverwx.github.io
 date_format: "ordinal"
 title: Forever
 subtitle: "The ordinary world"
