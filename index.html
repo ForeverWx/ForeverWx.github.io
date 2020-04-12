@@ -5,9 +5,10 @@ css: ['pages/index.css']
 comments: false
 ---
 
-<section class="banner">
+<!-- home top description-->
+<section>
     <div class="collection-head">
-        <div class="container">
+        <div class="container pb-2">
             <div class="collection-title">
                 <h1 class="collection-header" id="sub-title"><span>{{ site.subtitle }}</span></h1>
                 <div class="collection-info">
@@ -37,39 +38,42 @@ comments: false
         </div>
     </div>
 </section>
-<!-- /.banner -->
-<section class="container content">
-    <div class="colum2ns  d-flex flex-row">
-        <div class="column two-thirds" style="width: 1000px!important;">
-            <ol class="repo-list">
-                {% for post in paginator.posts %}
-                <li class="repo-list-item">
-                    <h3 class="repo-list-name">
-                        <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
-                    </h3>
-                    <p class="repo-list-description">
-                        {{ post.excerpt | strip_html | strip }}
-                    </p>
-                    <p class="repo-list-meta">
+<!-- home ariticle-->
+<section class="container card-body">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- home ariticle left-->
+            <div class="col-8">
+                <ol class="repo-list">
+                    {% for post in paginator.posts %}
+                    <li class="repo-list-item">
+                        <h3 class="repo-list-name">
+                            <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+                        </h3>
+                        <p class="repo-list-description">
+                            {{ post.excerpt | strip_html | strip }}
+                        </p>
+                        <p class="repo-list-meta">
                         <span class="meta-info">
                           <span class="octicon octicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}
                         </span>
-                        {% for cat in post.categories %}
-                        <span class="meta-info">
+                            {% for cat in post.categories %}
+                            <span class="meta-info">
                           <span class="octicon octicon-file-directory"></span>
                           <a href="{{ site.url }}/categories/#{{ cat }}" title="{{ cat }}">{{ cat }}</a>
                         </span>
-                        {% endfor %}
-                    </p>
-                </li>
-                {% endfor %}
-            </ol>
-        </div>
-        <div class="column one-third" style="width: 300px!important;">
-            {% include sidebar-search.html %}
-            {% include sidebar-qrcode.html %}
-            <!--            {% include sidebar-ad.html %}-->
-            {% include sidebar-popular-repo.html %}
+                            {% endfor %}
+                        </p>
+                    </li>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="col-4">
+                    {% include sidebar-search.html %}
+                    {% include sidebar-qrcode.html %}
+                    <!--            {% include sidebar-ad.html %}-->
+                    {% include sidebar-popular-repo.html %}
+            </div>
         </div>
     </div>
     <div class="pagination text-align">

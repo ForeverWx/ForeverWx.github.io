@@ -1,10 +1,14 @@
-
 <h3>Search</h3>
-<div id="site_search">
-    <input type="text" id="search_box" placeholder="Search">
+<div id="site_search" class="mt-4">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Keyword</span>
+        </div>
+        <input type="text" id="search_box" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
 </div>
-
-<ul id="search_results"></ul>
+<!--search result li-->
+<ul id="search_results" class="border-bottom pb-3"></ul>
 
 <link rel="stylesheet" type="text/css" href="{{ site.url }}/assets/css/modules/sidebar-search.css">
 <script src="{{ site.url }}/assets/js/simple-jekyll-search.min.js"></script>
